@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Spalsh Watter Effect</title>
+    <style>
+        h1 {
+            display: none;
+        }
+
+        section {
+            max-width: 1150px;
+            margin: auto;
+            background: black;
+            position: relative;
+            overflow: hidden;
+        }
+        
+
+        img {
+            display: block;
+        }
+        section img{transition: 0.5s;}
+
+        section:hover img {
+            filter: hue-rotate(70deg) blur(5px);
+            transform: scale(1.1);
+            /* transform: ; */
+        }
+
+
+        [alt="girl"] {
+            max-width: 50%;
+            top: 0;
+            position: relative;
+            margin: 0 0 0 auto;
+            animation: aa 3.0s both;
+        }
+
+        [alt="splash"] {
+            max-width: 75%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            /* display: none; */
+            animation: bb 3.0s 1.0s both;
+        }
+
+        @keyframes aa {
+            0% {
+                margin-right: -150px;
+                opacity: 0;
+            }
+
+            100% {
+                right: 0;
+                opacity: 1;
+            }
+        }
+
+        @keyframes bb {
+            0% {
+                left: 150px;
+                opacity: 0;
+            }
+
+            100% {
+                left: 0;
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>Splash and Girl</h1>
+        <img src="images/girl.png" alt="girl">
+        <img src="images/splash.png" alt="splash">
+    </section>
+</body>
+
+</html>
